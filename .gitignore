@@ -2,10 +2,10 @@
 venv
 
 # Database
-*.sqlite3
+#.sqlite3 #also letting the db get added.
 
 # User uploaded content
-media/
+#media/ #probably will want to keep image files
 
 # Python caches
 __pycache__
@@ -18,4 +18,4 @@ __pycache__
 
 # Trivia site
 .env
-staticfiles/
+# staticfiles/ #also will likely want to keep these
