@@ -14,7 +14,7 @@ __pycache__
 .idea/
 .vscode/
 
-dj_test/
+#dj_test/ #don't know why this was hidden, I guess she didn't expect people to keep the tutorial updated in the cloned repo.
 
 # Trivia site
 .env
