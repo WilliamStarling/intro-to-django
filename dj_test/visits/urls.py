@@ -5,6 +5,6 @@ from . import views #since this file is already in vists, we don't need to speci
 
 app_name = 'visits' #need to have the appname here.
 
-url_patterns = [
+urlpatterns = [
     path('', views.index, name='index'),
 ]
