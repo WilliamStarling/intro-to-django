@@ -5,7 +5,7 @@ venv
 #.sqlite3 #also letting the db get added.
 
 # User uploaded content
-#media/ #probably will want to keep image files
+#media/ #probably will want to venv djangokeep image files
 
 # Python caches
 __pycache__
