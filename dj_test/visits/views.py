@@ -1,4 +1,4 @@
-from .models import Visits
+from .models import Visit
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -7,7 +7,7 @@ from django.shortcuts import render
 def index(request):
     #gets the views object, and increments it by one each time the web page is visited, and then passes the value into the html template.
     #Also saves it to the database so it persists across server restarts.
-    v = Visits.objects.first()
+    v = Visit.objects.first()
     v.count += 1
     v.save()
 
