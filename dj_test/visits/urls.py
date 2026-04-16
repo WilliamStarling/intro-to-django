@@ -7,4 +7,5 @@ app_name = 'visits' #need to have the appname here.
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('<str:page>', views.index, name='index'),
 ]

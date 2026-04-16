@@ -2,11 +2,10 @@ from django.db import models
 
 # Create your models here.
 
-class Visits(models.Model):
-    count = models.IntegerField(default=0)
+class Visit(models.Model):
+    page = models.CharField(max_length=255) #the page that is being tracked, default is the home page
+    username = models.CharField(max_length=255, default="anonymous") #the username of the visitor, default is anonymous
+    timestamp = models.DateTimeField(auto_now_add=True) #the timestamp of the visit, automatically set to the current time when the object is created
 
     def __str__(self):
-        return f"Visits: {self.count}"
-
-    class Meta:
-        verbose_name_plural = "Visits" #overrides the plural name of the model in the admin interface
+        return f"Visit {self.pk}"
