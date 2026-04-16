@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
+from django.views.generic import RedirectView
+from . import settings
 
 
 def hello(request):
@@ -25,5 +27,6 @@ def hello(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello', hello),
+    path('favicon.ico', RedirectView.as_view(url=settings.STATIC_URL + 'favicon_test.ico')), #added favicon.ico as it's own url so it stops being directed to Visits app.
     path('', include('visits.urls')),
 ]

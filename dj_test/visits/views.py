@@ -7,6 +7,7 @@ from django.shortcuts import render
 def index(request: HttpRequest, page=""):
     #gets the views object, and increments it by one each time the web page is visited, and then passes the value into the html template.
     #Also saves it to the database so it persists across server restarts.
+        
     v = Visit(page=page)
     if request.user.is_authenticated: #if the user is logged in,
         v.username = request.user.username #updated the username of the visit to be the users username isntead of anonymous.
