@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+    <head>
+        <title>DJ test</title>
+        <link rel="icon" href="{% static 'visits/favicon.ico' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'visits/styles.css' %}">
+    </head>
+    <body>
+        <h1>
+            {# this is a comment #}
+            <img src="{%static 'visits/logo.png' %}"> {%if page %} {{ page|title }} {% else %} Hello world ! :] {% endif %}
+        </h1>
+        
+        <p>I've been visited {{ num_visits }} time{{ num_visits|pluralize }}!</p>
+
+        <ul>
+            {% for visit in visitors %}
+            <li>{{ visit.username }} at {{visit.timestamp }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
